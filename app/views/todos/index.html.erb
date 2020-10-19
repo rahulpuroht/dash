@@ -6,7 +6,7 @@
     <%= link_to "Edit Pivotal Token", edit_pivotal_path(current_user), class: "button" %>
   </div>
 
-  <% if [@my_pulls, @my_issues, @my_pivotal_stories].any?(&:present?) %>
+  <% if [@my_pulls, @my_issues, @my_pivotal_stories, @owned_pulls ].any?(&:present?) %>
     <div>
       <h3>Pull Requests: </h3>
       <h4> (<%= @my_pulls.size %>) Review Requested or Assigned to me: </h4>
